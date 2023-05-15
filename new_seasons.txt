@@ -1,0 +1,27 @@
+# Javascript
+
+var dateDebutAffichage = new Date('2023-04-06T17:00:00'); // Date et heure à partir de laquelle l'élément sera affiché
+var ...... = document.getElementById('......'); // Nom de l'id de la page
+
+if (new Date() >= dateDebutAffichage) {
+  .......style.display = 'block';
+}
+
+# Html news seasons
+
+<div id="......" style="display: none">
+			<div
+				class="shrink-0 w-32 md:width outline outline-gray-700 outline-2 bg-zinc-800 bg-opacity-75 rounded-lg overflow-hidden my-14 mr-3 ml-2 shadow-2xl shadow-black hover:shadow-zinc-900 transition-all duration-200 cursor-pointer"
+				style=" height:229px; width: 16rem">
+				<a target="blank" href="......">
+					<img class="w-full h-30 md:h-42 object-cover hover:opacity-75 transition-all duration-200 cursor-pointer"
+						src="......">
+					<div class="px-4 py-2">
+						<h1 class="police taille text-center truncate h-6 epaisseur couleur Ø">(1) ......</h1>
+
+						<button
+							class="rounded rounded-xs bg-opacity-50 bg-blue-500 text-white text-xs mx-1 mt-1 px-1 py-0.5">Anime</button>
+					</div>
+				</a>
+			</div>
+		</div>

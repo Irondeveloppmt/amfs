@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta name="keywords"
+    content="anime-sama, anime, scan, anime sama, vostfr, vf, streaming, streaming vostfr, streaming vf, sans pubs, streaming sans pubs, streaming scan">
+  <meta name="description" content="Anime-Sama - Streaming et catalogage d'animes et scans.">
+  <title>Anime-Sama - Streaming et catalogage d'animes et scans.</title>
+  <script src="/cdn-cgi/apps/head/Qh3EsdoC9RgjHB89rO5AM2P1vbM.js"></script>
+  <link rel="canonical" href="https://anime-sama.fr/" />
+
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+
+
+    <link rel="stylesheet" href="style_ordi.css" />
+    <script src="script.js"></script>
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start’:
+		new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-P8KHZ92');</script>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-183495392-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-183495392-1');
+    </script>
+    <script async src="https://arc.io/widget.min.js#bgSRpJNF"></script>
+    <script src="https://www.googleoptimize.com/optimize.js?id=OPT-TNJBC6T"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+
+
+    <link rel="shortcut icon" type="image/png"
+      href="https://cdn.statically.io/gh/Anime-Sama/IMG/img/autres/AS_border.png">
+    <link rel="shortcut icon" sizes="192x192"
+      href="https://cdn.statically.io/gh/Anime-Sama/IMG/img/autres/AS_border.png">
+    <link rel="apple-touch-icon" href="https://cdn.statically.io/gh/Anime-Sama/IMG/img/autres/AS_border.png">
+
+
+    <script>
+      //template cartes defaut
+      function carte(nom, url, image) {
+        document.write('<div class="shrink-0 w-32 md:w-44 outline outline-gray-700 outline-2 bg-zinc-800 bg-opacity-75 rounded-lg overflow-hidden my-14 mr-3 ml-2 md:ml-5 shadow-2xl shadow-black hover:shadow-zinc-900 transition-all duration-200 cursor-pointer"><a href="https://anime-sama.fr/catalogue/' + url + '"><img class="w-full h-30 md:h-42 object-cover hover:opacity-75 transition-all duration-200 cursor-pointer" src="https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/' + image + '.jpg"><div class="px-4 py-2"><h1 class="text-gray-200 font-bold text-sm text-center uppercase hover:text-clip">' + nom + '</h1></div></a></div>');
+      }
+      //template cartes planning
+      function cartePlanning(nom, url, image, heure, probleme, type, langue) {
+        document.write('<div class="divOeuvrePlanning ' + type + ' shrink-0 outline outline-gray-700 outline-2 bg-zinc-800 bg-opacity-75 rounded-lg overflow-hidden shadow-2xl shadow-black hover:shadow-zinc-900 transition-all duration-200 cursor-pointer"><a href="https://anime-sama.fr/catalogue/' + url + '"><img class="imgOeuvrePlanning w-full object-cover hover:opacity-75 transition-all duration-200 cursor-pointer" src="https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/' + image + '.jpg"><div class="px-4 py-2"><h1 class="text-gray-200 font-bold text-sm text-center uppercase truncate hover:text-clip">' + nom + '</h1><hr class="border-t border-slate-500 mt-2"></hr><div class="flex flex-wrap justify-center"><button class="rounded rounded-lg bg-opacity-50 text-blue-100 text-md font-medium mx-0.5 mt-1 px-1 py-0.5 Heure">' + heure + '</button><button class="rounded rounded-lg bg-opacity-50 text-red-600 text-xs font-medium mx-0.5 mt-1 py-0.5 Probleme">' + probleme + '</button></div><div class="flex justify-center"><button class="rounded rounded-xs bg-slate-700 text-white text-xs mx-0.5 mt-1 px-1 py-0.5">' + type + '</button><button class="rounded rounded-xs bg-opacity-50 bg-blue-500 text-white text-xs mx-0.5 mt-1 px-1 py-0.5">' + langue + '</button></div></div></a></div>');
+      }
+      //template cartes favoris / watchlists
+      function carteSaved(nom, url, image) {
+        document.write('<div class="shrink-0 w-32 md:w-44 outline outline-gray-700 outline-2 bg-zinc-800 bg-opacity-75 rounded-lg overflow-hidden my-14 mr-3 ml-2 md:ml-5 shadow-2xl shadow-black hover:shadow-zinc-900 transition-all duration-200 cursor-pointer"><a href="' + url + '"><img class="w-full h-30 md:h-42 object-cover hover:opacity-75 transition-all duration-200 cursor-pointer" src="' + image + '"><div class="px-4 py-2"><h1 class="text-gray-200 font-bold text-sm text-center uppercase hover:text-clip">' + nom + '</h1></div></a></div>');
+      }
+      //template cartes historique
+      function carteHistorique(nom, url, image, type, langue, episode) {
+        document.write('<div class="shrink-0 w-32 md:w-44 outline outline-gray-700 outline-2 bg-zinc-800 bg-opacity-75 rounded-lg overflow-hidden my-14 mr-3 ml-2 md:ml-5 shadow-2xl shadow-black hover:shadow-zinc-900 transition-all duration-200 cursor-pointer"><a href="' + url + '"><img class="w-full h-30 md:h-42 object-cover hover:opacity-75 transition-all duration-200 cursor-pointer" src="' + image + '"><div class="px-4 py-2"><h1 class="text-gray-200 font-bold text-sm text-center uppercase hover:text-clip">' + nom + '</h1><hr class="border-t border-slate-500 my-2"></hr><div class="flex flex-wrap justify-center"><button class="rounded rounded-xs bg-indigo-900 text-white text-xs mx-0.5 mt-1 px-1 py-0.5">' + type + '</button><button class="rounded rounded-xs bg-opacity-50 bg-blue-500 text-white text-xs mx-0.5 mt-1 px-1 py-0.5">' + langue + '</button><button class="rounded rounded-xs bg-opacity-50 bg-cyan-500 text-white text-xs mx-0.5 mt-1 px-1 py-0.5">' + episode + '</button></div></div></a></div>');
+      }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <body>
+
+    <h2 class="flex text-white text-xl font-bold uppercase mt-6 mb-4 border-b-4 border-slate-500">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-1 mr-2" viewBox="0 0 24 24" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z"
+          clip-rule="evenodd" />
+      </svg>
+      Derniers ajouts
+    </h2>
+    <div class="scrollBarStyled flex flex-nowrap overflow-y-hidden mb-6 bg-slate-900 bg-opacity-70 rounded">
+      <div
+        class="shrink-0 w-32 md:w-44 outline outline-gray-700 outline-2 bg-zinc-800 bg-opacity-75 rounded-lg overflow-hidden my-14 mr-3 ml-2 md:ml-5 shadow-2xl shadow-black hover:shadow-zinc-900 transition-all duration-200 cursor-pointer">
+        <a href="https://anime-sama.fr/catalogue/sugar-apple-fairy-tale">
+          <img class="w-full h-30 md:h-42 object-cover hover:opacity-75 transition-all duration-200 cursor-pointer"
+            src="https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/sugar-apple-fairy-tale.jpg">
+          <div class="px-4 py-2">
+            <h1 class="text-gray-200 font-semibold text-xs text-center truncate h-6 uppercase">Sugar Apple Fairy Tale
+            </h1>
+            <p class="text-center text-white text-xs opacity-40 truncate italic"></p>
+          </div>
+        </a>
+      </div>
+      <div
+        class="shrink-0 w-32 md:w-44 outline outline-gray-700 outline-2 bg-zinc-800 bg-opacity-75 rounded-lg overflow-hidden my-14 mr-3 ml-2 md:ml-5 shadow-2xl shadow-black hover:shadow-zinc-900 transition-all duration-200 cursor-pointer">
+        <a href="https://anime-sama.fr/catalogue/onimai-im-now-your-sister">
+          <img class="w-full h-30 md:h-42 object-cover hover:opacity-75 transition-all duration-200 cursor-pointer"
+            src="https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/onimai-im-now-your-sister.jpg">
+          <div class="px-4 py-2">
+            <h1 class="text-gray-200 font-semibold text-xs text-center truncate h-6 uppercase">ONIMAI: I'm Now Your
+              Sister!</h1>
+            <p class="text-center text-white text-xs opacity-40 truncate italic">Oniichan wa Oshimai !</p>
+          </div>
+        </a>
+      </div>
+      <div
+        class="shrink-0 w-32 md:w-44 outline outline-gray-700 outline-2 bg-zinc-800 bg-opacity-75 rounded-lg overflow-hidden my-14 mr-3 ml-2 md:ml-5 shadow-2xl shadow-black hover:shadow-zinc-900 transition-all duration-200 cursor-pointer">
+        <a href="https://anime-sama.fr/catalogue/revenger">
+          <img class="w-full h-30 md:h-42 object-cover hover:opacity-75 transition-all duration-200 cursor-pointer"
+            src="https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/revenger.jpg">
+          <div class="px-4 py-2">
+            <h1 class="text-gray-200 font-semibold text-xs text-center truncate h-6 uppercase">Revenger</h1>
+            <p class="text-center text-white text-xs opacity-40 truncate italic"></p>
+          </div>
+        </a>
+      </div>
+      <div
+        class="shrink-0 w-32 md:w-44 outline outline-gray-700 outline-2 bg-zinc-800 bg-opacity-75 rounded-lg overflow-hidden my-14 mr-3 ml-2 md:ml-5 shadow-2xl shadow-black hover:shadow-zinc-900 transition-all duration-200 cursor-pointer">
+        <a href="https://anime-sama.fr/catalogue/saving-80000-gold-in-another-world-for-my-retirement">
+          <img class="w-full h-30 md:h-42 object-cover hover:opacity-75 transition-all duration-200 cursor-pointer"
+            src="https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/saving-80000-gold-in-another-world-for-my-retirement.jpg">
+          <div class="px-4 py-2">
+            <h1 class="text-gray-200 font-semibold text-xs text-center truncate h-6 uppercase">Saving 80,000 Gold in
+              Another World for my Retirement</h1>
+            <p class="text-center text-white text-xs opacity-40 truncate italic">Rougo ni Sonaete Isekai de 8-Man-Mai no
+              Kinka wo Tamemasu</p>
+          </div>
+        </a>
+      </div>
+      <div
+        class="shrink-0 w-32 md:w-44 outline outline-gray-700 outline-2 bg-zinc-800 bg-opacity-75 rounded-lg overflow-hidden my-14 mr-3 ml-2 md:ml-5 shadow-2xl shadow-black hover:shadow-zinc-900 transition-all duration-200 cursor-pointer">
+        <a href="https://anime-sama.fr/catalogue/the-tale-of-the-outcasts">
+          <img class="w-full h-30 md:h-42 object-cover hover:opacity-75 transition-all duration-200 cursor-pointer"
+            src="https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/the-tale-of-the-outcasts.jpg">
+          <div class="px-4 py-2">
+            <h1 class="text-gray-200 font-semibold text-xs text-center truncate h-6 uppercase">The Tale of the Outcasts
+            </h1>
+            <p class="text-center text-white text-xs opacity-40 truncate italic">Nokemono-tachi no Yoru, Le conte des
+              parias</p>
+          </div>
+        </a>
+      </div>
+      <div
+        class="shrink-0 w-32 md:w-44 outline outline-gray-700 outline-2 bg-zinc-800 bg-opacity-75 rounded-lg overflow-hidden my-14 mr-3 ml-2 md:ml-5 shadow-2xl shadow-black hover:shadow-zinc-900 transition-all duration-200 cursor-pointer">
+        <a href="https://anime-sama.fr/catalogue/chillin-in-my-30s-after-getting-fired-from-the-demon-kings-army">
+          <img class="w-full h-30 md:h-42 object-cover hover:opacity-75 transition-all duration-200 cursor-pointer"
+            src="https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/chillin-in-my-30s-after-getting-fired-from-the-demon-kings-army.jpg">
+          <div class="px-4 py-2">
+            <h1 class="text-gray-200 font-semibold text-xs text-center truncate h-6 uppercase">Chillin' in My 30s after
+              Getting Fired from the Demon King's Army</h1>
+            <p class="text-center text-white text-xs opacity-40 truncate italic">Kaiko Sareta Ankoku Heishi (30-Dai) no
+              Slow na Second Life</p>
+          </div>
+        </a>
+      </div>
+      <div
+        class="shrink-0 w-32 md:w-44 outline outline-gray-700 outline-2 bg-zinc-800 bg-opacity-75 rounded-lg overflow-hidden my-14 mr-3 ml-2 md:ml-5 shadow-2xl shadow-black hover:shadow-zinc-900 transition-all duration-200 cursor-pointer">
+        <a href="https://anime-sama.fr/catalogue/handyman-saitou-in-another-world">
+          <img class="w-full h-30 md:h-42 object-cover hover:opacity-75 transition-all duration-200 cursor-pointer"
+            src="https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/handyman-saitou-in-another-world.jpg">
+          <div class="px-4 py-2">
+            <h1 class="text-gray-200 font-semibold text-xs text-center truncate h-6 uppercase">Handyman Saitou In
+              Another World</h1>
+            <p class="text-center text-white text-xs opacity-40 truncate italic">Benriya Saitou-san, Isekai ni Iku</p>
+          </div>
+        </a>
+      </div>
+      <div
+        class="shrink-0 w-32 md:w-44 outline outline-gray-700 outline-2 bg-zinc-800 bg-opacity-75 rounded-lg overflow-hidden my-14 mr-3 ml-2 md:ml-5 shadow-2xl shadow-black hover:shadow-zinc-900 transition-all duration-200 cursor-pointer">
+        <a
+          href="https://anime-sama.fr/catalogue/the-magical-revolution-of-the-reincarnated-princess-and-the-genius-young-lady">
+          <img class="w-full h-30 md:h-42 object-cover hover:opacity-75 transition-all duration-200 cursor-pointer"
+            src="https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/the-magical-revolution-of-the-reincarnated-princess-and-the-genius-young-lady.jpg">
+          <div class="px-4 py-2">
+            <h1 class="text-gray-200 font-semibold text-xs text-center truncate h-6 uppercase">The Magical Revolution of
+              the Reincarnated Princess and the Genius Young Lady</h1>
+            <p class="text-center text-white text-xs opacity-40 truncate italic">Tensei Oujo to Tensai Reijou no Mahou
+              Kakumei</p>
+          </div>
+        </a>
+      </div>
+      <div
+        class="shrink-0 w-32 md:w-44 outline outline-gray-700 outline-2 bg-zinc-800 bg-opacity-75 rounded-lg overflow-hidden my-14 mr-3 ml-2 md:ml-5 shadow-2xl shadow-black hover:shadow-zinc-900 transition-all duration-200 cursor-pointer">
+        <a href="https://anime-sama.fr/catalogue/the-iceblade-sorcerer-shall-rule-the-world">
+          <img class="w-full h-30 md:h-42 object-cover hover:opacity-75 transition-all duration-200 cursor-pointer"
+            src="https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/the-iceblade-sorcerer-shall-rule-the-world.jpg">
+          <div class="px-4 py-2">
+            <h1 class="text-gray-200 font-semibold text-xs text-center truncate h-6 uppercase">The Iceblade Sorcerer
+              Shall Rule the World</h1>
+            <p class="text-center text-white text-xs opacity-40 truncate italic">Hyouken no Majutsushi ga Sekai wo
+              Suberu - Sekai Saikyou no Majutsushi de Aru Shounen wa, Majutsu Gakuin ga Nyuugaku Suru</p>
+          </div>
+        </a>
+      </div>
+      <div
+        class="shrink-0 w-32 md:w-44 outline outline-gray-700 outline-2 bg-zinc-800 bg-opacity-75 rounded-lg overflow-hidden my-14 mr-3 ml-2 md:ml-5 shadow-2xl shadow-black hover:shadow-zinc-900 transition-all duration-200 cursor-pointer">
+        <a href="https://anime-sama.fr/catalogue/trigun-stampede">
+          <img class="w-full h-30 md:h-42 object-cover hover:opacity-75 transition-all duration-200 cursor-pointer"
+            src="https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/trigun-stampede.jpg">
+          <div class="px-4 py-2">
+            <h1 class="text-gray-200 font-semibold text-xs text-center truncate h-6 uppercase">Trigun Stampede</h1>
+            <p class="text-center text-white text-xs opacity-40 truncate italic"></p>
+          </div>
+        </a>
+      </div>
+      <div
+        class="shrink-0 w-32 md:w-44 outline outline-gray-700 outline-2 bg-zinc-800 bg-opacity-75 rounded-lg overflow-hidden my-14 mr-3 ml-2 md:ml-5 shadow-2xl shadow-black hover:shadow-zinc-900 transition-all duration-200 cursor-pointer">
+        <a href="https://anime-sama.fr/catalogue/the-legend-of-heroes-trails-of-cold-steel-northern-war">
+          <img class="w-full h-30 md:h-42 object-cover hover:opacity-75 transition-all duration-200 cursor-pointer"
+            src="https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/the-legend-of-heroes-trails-of-cold-steel-northern-war.jpg">
+          <div class="px-4 py-2">
+            <h1 class="text-gray-200 font-semibold text-xs text-center truncate h-6 uppercase">The Legend of Heroes:
+              Trails of Cold Steel - Northern War</h1>
+            <p class="text-center text-white text-xs opacity-40 truncate italic">Eiyuu Densetsu : Sen no Kiseki -
+              Northern War</p>
+          </div>
+        </a>
+      </div>
+      <div
+        class="shrink-0 w-32 md:w-44 outline outline-gray-700 outline-2 bg-zinc-800 bg-opacity-75 rounded-lg overflow-hidden my-14 mr-3 ml-2 md:ml-5 shadow-2xl shadow-black hover:shadow-zinc-900 transition-all duration-200 cursor-pointer">
+        <a href="https://anime-sama.fr/catalogue/buddy-daddies">
+          <img class="w-full h-30 md:h-42 object-cover hover:opacity-75 transition-all duration-200 cursor-pointer"
+            src="https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/buddy-daddies.jpg">
+          <div class="px-4 py-2">
+            <h1 class="text-gray-200 font-semibold text-xs text-center truncate h-6 uppercase">Buddy Daddies</h1>
+            <p class="text-center text-white text-xs opacity-40 truncate italic">Family Story of Two Killers and a Girl,
+              Buddy Anime Project</p>
+          </div>
+        </a>
+      </div>
+      <div
+        class="shrink-0 w-32 md:w-44 outline outline-gray-700 outline-2 bg-zinc-800 bg-opacity-75 rounded-lg overflow-hidden my-14 mr-3 ml-2 md:ml-5 shadow-2xl shadow-black hover:shadow-zinc-900 transition-all duration-200 cursor-pointer">
+        <a href="https://anime-sama.fr/catalogue/farming-life-in-another-world">
+          <img class="w-full h-30 md:h-42 object-cover hover:opacity-75 transition-all duration-200 cursor-pointer"
+            src="https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/farming-life-in-another-world.jpg">
+          <div class="px-4 py-2">
+            <h1 class="text-gray-200 font-semibold text-xs text-center truncate h-6 uppercase">Farming Life in Another
+              World</h1>
+            <p class="text-center text-white text-xs opacity-40 truncate italic">Isekai Nonbiri Nouka</p>
+          </div>
+        </a>
+      </div>
+      <div
+        class="shrink-0 w-32 md:w-44 outline outline-gray-700 outline-2 bg-zinc-800 bg-opacity-75 rounded-lg overflow-hidden my-14 mr-3 ml-2 md:ml-5 shadow-2xl shadow-black hover:shadow-zinc-900 transition-all duration-200 cursor-pointer">
+        <a href="https://anime-sama.fr/catalogue/ningen-fushin">
+          <img class="w-full h-30 md:h-42 object-cover hover:opacity-75 transition-all duration-200 cursor-pointer"
+            src="https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/ningen-fushin.jpg">
+          <div class="px-4 py-2">
+            <h1 class="text-gray-200 font-semibold text-xs text-center truncate h-6 uppercase">Ningen Fushin</h1>
+            <p class="text-center text-white text-xs opacity-40 truncate italic">Ningen Fushin no Boukenshatachi ga
+              Sekai wo Sukuu Youdesu, Ningen Fushin : Adventurers Who Don't Believe in Humanity Will Save The World</p>
+          </div>
+        </a>
+      </div>
+      <div
+        class="shrink-0 w-32 md:w-44 outline outline-gray-700 outline-2 bg-zinc-800 bg-opacity-75 rounded-lg overflow-hidden my-14 mr-3 ml-2 md:ml-5 shadow-2xl shadow-black hover:shadow-zinc-900 transition-all duration-200 cursor-pointer">
+        <a href="https://anime-sama.fr/catalogue/the-reincarnation-of-the-strongest-exorcist-in-another-world">
+          <img class="w-full h-30 md:h-42 object-cover hover:opacity-75 transition-all duration-200 cursor-pointer"
+            src="https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/the-reincarnation-of-the-strongest-exorcist-in-another-world.jpg">
+          <div class="px-4 py-2">
+            <h1 class="text-gray-200 font-semibold text-xs text-center truncate h-6 uppercase">The Reincarnation of the
+              Strongest Exorcist in Another World</h1>
+            <p class="text-center text-white text-xs opacity-40 truncate italic">Saikyou Onmyouji no Isekai Tenseiki:
+              Geboku no Youkai-domo ni Kurabete Monster ga Yowasugirunda ga</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </body>
+  <div class="flex grid grid-cols-1 md:grid-cols-2">
+    <div class="md:mr-7">
+
+</html>

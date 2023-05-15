@@ -1,0 +1,98 @@
+@media screen and (max-width: 900px){
+  html, body {
+    height: 100%;
+    width: 100%;
+    cursor: grab;
+  }
+  body{
+    background-color: #000411;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cg fill='%231f2329' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M0 0h4v4H0V0zm4 4h4v4H4V4z'/%3E%3C/g%3E%3C/svg%3E");
+    display:block;
+    text-align:center;
+  }
+	.couleur {
+    --tw-text-opacity: 1;
+    color: rgb(229 231 235 / var(--tw-text-opacity));
+	}
+	.couleurØ {
+    --tw-text-opacity: 1;
+    color: rgb(192 22 11 / var(--tw-text-opacity));;
+	}
+	.police {
+    text-transform: uppercase;
+	}
+	.epaisseur {
+    font-weight: 600;
+	}
+	.taille {
+    font-size: 0.75rem;
+    /* line-height: 1rem; */
+	}
+  .button {
+    font-family: Bebas Neue;
+    background: transparent;
+    border: 2px solid white;
+    padding: 0.25em 0.75em;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px; 
+    transition: .5s ease;
+    font-size: 22px;
+  }
+  .button:hover{
+    background: transparent;
+    border: 2px solid black;
+    color: black;
+    box-shadow: 5px 7px 5px #202124;
+    font-size: 23px;
+  }
+  a{
+    margin: 7px;
+  }
+  h2{
+    color: #202124;
+    text-align:center;
+  }
+  h7{
+    font-size: 20px;
+    font-weight: 1000;
+  }
+  .conteneur{
+    margin: 0px 0px;
+    height: 45px;
+  }
+  .conteneur2{
+    margin: 0px 625px;
+    height: 3px;
+    background-color: none;
+  }
+  .border{
+    border:4px solid;
+    color: #2B373D;
+    border-radius: 15px; 
+    box-shadow: 5px 7px 5px #202124;
+    background-color: none;
+    padding: 15px ;
+  }
+		header {
+	  background-color: #4281F5;
+	  --tw-text-opacity: 1;
+    color: rgb(229 231 235 / var(--tw-text-opacity));
+	  padding: 10px;
+	  position: fixed;
+		font-size: 14px;
+	  top: 0;
+		z-index: 9999;
+	  width: 100%;
+	}
+	.container{
+		padding: 14px;
+	}
+	.bandeau_gen {
+		text-align: center;
+	  display: block;
+	  text-decoration: none;
+	}
+}
